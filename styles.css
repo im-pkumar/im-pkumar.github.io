@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #ffde59; /* Text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: #2b2b2b; /* Background color */
+}
+
+/* Navigation Styles */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #ffde59; /* Text color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffde59; /* Text color */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Main Section Styles */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.section {
+    background: #2b2b2b; /* Section background color */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.section h2 {
+    color: #ffde59; /* Text color */
+    text-align: center; /* Center align section titles */
+}
+
+.section p {
+    color: #ffde59; /* Text color */
+    font-size: 16px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Projects Section Styles */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%;
+}
+
+.column h3 {
+    text-align: center;
+    color: #ffde59; /* Text color */
+}
+
+/* Social Icons Styles */
+.social-icons {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffde59; /* Text color */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+/* Footer Styles */
+.footer, .connect-section {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffde59; /* Text color */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.connect-section {
+    margin-bottom: 0; /* Remove bottom margin */
+    border-top-left-radius: 0; /* Remove top border radius */
+    border-top-right-radius: 0; /* Remove top border radius */
+}
