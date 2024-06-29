@@ -13,7 +13,7 @@ body {
 .navbar {
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
-    padding: 10px 0;
+    padding: 2px 0;
     position: relative;
     z-index: 1;
 }
@@ -25,18 +25,18 @@ body {
 
 .navbar li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 16px;
 }
 
 .navbar a {
     color: #ffde59; /* Text color */
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #ddd;
+    color: #ff4b04;
 }
 
 /* Header Styles */
@@ -86,8 +86,9 @@ main {
 }
 
 .section p {
-    color: #ffde59; /* Text color */
-    font-size: 16px;
+    color: #fdeebc; /* Text color */
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .section ul {
@@ -102,8 +103,45 @@ main {
     border-radius: 5px;
 }
 
-/* Projects Section Styles */
-.projects-container {
+.highlight-text {
+    color: #ffde59;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guide-link {
+    color: #ffde59;     /* Your desired color */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.guide-link:hover {
+    color: #ff4b04; /* Color on hover */
+}
+
+.view-link {
+    background-color: #ffde59; /* Yellow background */
+    color: #000; /* Text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 200px; /* Space between the links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+.view-link:hover {
+    background-color: #000; /* Background color on hover */
+    color: #ff4b04; /* Text color on hover */
+}
+
+/* Education Section Styles */
+.education-container {
     display: flex;
     justify-content: space-between;
 }
@@ -115,6 +153,57 @@ main {
 .column h3 {
     text-align: center;
     color: #ffde59; /* Text color */
+}
+
+/* Projects Section Styles */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Slider Navigation */
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-nav button {
+    background-color: #ffde59;
+    border: none;
+    color: #2b2b2b;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.slider-nav button:hover {
+    background-color: #2b2b2b;
+    color: #ff4b04;
 }
 
 /* Social Icons Styles */
@@ -132,21 +221,29 @@ main {
 }
 
 .social-icons a:hover {
-    color: #ddd;
+    color: #ff4b04;
 }
 
 /* Footer Styles */
-.footer, .connect-section {
+.footer {
     background: rgba(0, 0, 0, 0.8);
     color: #ffde59; /* Text color */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: relative;
     z-index: 1;
 }
 
-.connect-section {
-    margin-bottom: 0; /* Remove bottom margin */
-    border-top-left-radius: 0; /* Remove top border radius */
-    border-top-right-radius: 0; /* Remove top border radius */
+.footer h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 0;
 }
