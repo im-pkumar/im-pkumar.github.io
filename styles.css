@@ -97,7 +97,6 @@ main {
 }
 
 .section ul li {
-    background: rgba(255, 255, 255, 0.1);
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
@@ -136,6 +135,20 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 .view-link:hover {
+    background-color: #000; /* Background color on hover */
+    color: #ff4b04; /* Text color on hover */
+}
+
+.project-link {
+    background-color: #ffde59; /* Yellow background */
+    color: #000; /* Text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+.project-link:hover {
     background-color: #000; /* Background color on hover */
     color: #ff4b04; /* Text color on hover */
 }
