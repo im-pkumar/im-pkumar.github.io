@@ -37,3 +37,33 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.appendChild(sliderNav);
     });
 });
+
+let currentIndex = 0;
+let currentAcademicIndex = 0;
+let currentPersonalIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.project-slider .slide');
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    document.querySelector('.project-slider .slides').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+// Initialize the sliders by showing the first slides
+showSlide(currentIndex);
+
+
