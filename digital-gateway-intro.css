@@ -1,0 +1,92 @@
+/* Digital Gateway — designed to complement the existing black + gold portfolio */
+#digital-gateway {
+  --dg-bg: #101010;
+  --dg-gold: #ffda45;
+  --dg-white: #f6f3e8;
+  --dg-muted: #c9c3ad;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--dg-white);
+  background:
+    radial-gradient(ellipse at 50% 53%, rgba(255,218,69,.075), transparent 44%),
+    var(--dg-bg);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .38s ease, visibility .38s ease;
+}
+#digital-gateway.dg-exit { opacity: 0; visibility: hidden; pointer-events: none; }
+#digital-gateway .dg-particles {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; opacity: .75;
+}
+#digital-gateway .dg-center {
+  position: relative; z-index: 2; width: min(90vw, 720px);
+  padding: 2rem 1.2rem; text-align: center;
+}
+#digital-gateway .dg-gateway {
+  position: relative; width: clamp(74px, 12vw, 108px);
+  height: clamp(98px, 16vw, 142px); margin: 0 auto 1.55rem;
+  opacity: 0; transform: translateY(8px);
+  animation: dg-rise .65s .05s cubic-bezier(.2,.75,.25,1) forwards;
+}
+#digital-gateway .dg-arch {
+  position: absolute; inset: 0 0 0; border: 1px solid rgba(255,218,69,.82);
+  border-bottom: 0; border-radius: 60% 60% 0 0 / 38% 38% 0 0;
+  transform-origin: bottom center;
+  box-shadow: 0 0 24px rgba(255,218,69,.08), inset 0 0 18px rgba(255,218,69,.035);
+  animation: dg-open .9s .08s cubic-bezier(.2,.7,.2,1) both;
+}
+#digital-gateway .dg-arch::after {
+  content: ""; position: absolute; left: 50%; top: 12%; bottom: 0; width: 1px;
+  background: linear-gradient(180deg, transparent, var(--dg-gold) 48%, rgba(255,218,69,.16));
+  box-shadow: 0 0 12px rgba(255,218,69,.5);
+}
+#digital-gateway .dg-floor {
+  position: absolute; left: -25%; right: -25%; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dg-gold), transparent);
+}
+#digital-gateway .dg-eyebrow {
+  margin: 0 0 .6rem; color: var(--dg-gold);
+  font: 500 .67rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .25em; text-transform: uppercase; opacity: 0;
+  animation: dg-copy .5s .48s ease forwards;
+}
+#digital-gateway .dg-name {
+  margin: 0; color: var(--dg-white);
+  font: 500 clamp(1.75rem, 5.1vw, 3.45rem)/1.1 Inter, "Segoe UI", Arial, sans-serif;
+  letter-spacing: .045em; opacity: 0; transform: translateY(8px);
+  animation: dg-copy .58s .58s ease forwards;
+}
+#digital-gateway .dg-tagline {
+  margin: .85rem 0 0; color: var(--dg-muted);
+  font: 400 clamp(.61rem, 1.6vw, .76rem)/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .12em; text-transform: uppercase; opacity: 0;
+  animation: dg-copy .5s .82s ease forwards;
+}
+#digital-gateway .dg-skip {
+  position: absolute; z-index: 3;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  border: 1px solid rgba(255,218,69,.45); border-radius: 999px;
+  padding: .65rem .9rem; color: var(--dg-white); background: rgba(16,16,16,.7);
+  font: 500 .7rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .09em; text-transform: uppercase; cursor: pointer;
+}
+#digital-gateway .dg-skip:hover { background: rgba(255,218,69,.12); border-color: var(--dg-gold); }
+#digital-gateway .dg-skip:focus-visible { outline: 2px solid var(--dg-gold); outline-offset: 3px; }
+@keyframes dg-rise { to { opacity: 1; transform: translateY(0); } }
+@keyframes dg-open { from { transform: scaleY(.12); opacity: .3; } to { transform: scaleY(1); opacity: 1; } }
+@keyframes dg-copy { to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 480px) {
+  #digital-gateway .dg-center { padding-inline: .9rem; }
+  #digital-gateway .dg-name { letter-spacing: .02em; }
+  #digital-gateway .dg-tagline { letter-spacing: .065em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #digital-gateway, #digital-gateway * { animation: none !important; transition: none !important; }
+}

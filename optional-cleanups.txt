@@ -1,0 +1,16 @@
+OPTIONAL SMALL FIXES FOUND IN THE CURRENT REPOSITORY
+
+1) In index.html, correct the broken Supervised ML screenshot URL:
+   Find: https:/raw.githubusercontent.com/im-pkumar/Supervised-ML-Project/master/p_imdb.png
+   Replace with:
+   https://raw.githubusercontent.com/im-pkumar/Supervised-ML-Project/master/p_imdb.png
+
+2) In index.html, correct the heading typo:
+   Find: Master of Techechnology
+   Replace with: Master of Technology
+
+3) The Employee Management System project has an empty link:
+   <a class="project-link" href="" target="_blank">View</a>
+   Only replace href after you confirm the correct project repository/demo URL. Leaving href empty can send visitors back to the same page.
+
+These are optional; the intro itself does not require changing your existing content or particles-config.json.
